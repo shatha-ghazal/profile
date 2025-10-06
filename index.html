@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shatha Ghazal | Portfolio</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff9d9;
+      margin: 0;
+      padding: 0;
+      color: #1d1d1d;
+      
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    h1, h2, h3 {
+      margin: 0;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+    }
+    .logo {
+      font-weight: bold;
+      color: #00247d;
+    }
+    nav {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    nav a {
+      font-size: 14px;
+      color: #333;
+    }
+    .socials {
+      display: flex;
+      gap: 15px;
+      margin-left:auto;
+    }
+
+    /* Hero Section */
+    .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 50px;
+    position: relative;   /* <-- important */
+  }
+    .hero-text {
+      max-width: 544px;
+      max-height:232px;
+
+    }
+    .hero-text h1 {
+      font-size: 48px;
+      color: #00247d;
+      font-weight: bold;
+    }
+    .hero-text p {
+      margin: 15px 0;
+      font-size: 18px;
+    }
+    .resume-btn {
+      background: #fff38a;
+      border: 1px solid #d8c95f;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+
+    /* Section Title */
+    section {
+      padding: 80px 50px;
+    }
+    section h2 {
+      font-size: 48px;
+      font-weight: bold;
+      color: #f5ec82;
+      margin-bottom: 20px;
+    }
+
+    /* About Section */
+    .timeline {
+      margin-top: 30px;
+      margin-left:250px;
+    }
+    .timeline-item {
+      margin-bottom: 30px;
+    }
+    .timeline-item h3 {
+      color: #00247d;
+      font-size: 16px;
+    }
+
+    /* Work Section */
+    .work-items {
+      display: flex;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .work-item {
+      flex: 1;
+    }
+    .work-item img {
+      width: 100%;
+      height: auto;
+    }
+    .work-item h3 {
+      margin: 10px 0;
+      font-size: 18px;
+      color: #00247d;
+    }
+    .work-item p {
+      font-size: 14px;
+      color: #444;
+    }
+
+    /* Contact Section */
+    .contact {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+    }
+    .contact img {
+      width: 200px;
+    }
+    .contact-info p {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    .contact-info a {
+      display: block;
+      margin-bottom: 5px;
+      color: #00247d;
+    }
+
+
+
+    .resume-btn {
+            padding: 10px 20px;
+            background-color: #007bff; /* Example background color */
+            color: white;
+            border: none;
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer;
+            /* Horizontal offset, Vertical offset, Blur radius, Color */
+            transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .resume-btn:hover {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6); /* More pronounced shadow on hover */
+        }
+
+        .line-box {
+  border: 1px solid #000; /* Use a border to create the line effect */
+  background-color: transparent; /* Ensure no fill inside the box */
+}
+
+.hero-image {
+    height: 420px;
+    width: 420px;
+    border-radius: 50%;
+    border: 5px solid #f4f1d0;
+  }
+
+  .hero-icon {
+    position: absolute;   /* positioned relative to .hero */
+    top: 27px;            /* adjust until it aligns with hero image */
+    right: 105px;          /* adjust until it hugs hero image */
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+  }
+
+  
+
+
+
+
+
+
+
+
+  /* Tablet */
+  @media (max-width: 1024px) {
+    header {
+    flex-direction: row;      /* stack logo, nav, socials */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;                   /* space between items */
+    padding: 20px;
+  }
+
+  nav {
+    justify-content: center;     /* center nav links */
+    gap: 20px;
+  }
+
+  .socials-1 {
+    justify-content: right;     /* center socials */
+    margin-top:10px;
+    margin-right:-15px;
+    align-items: right;
+
+  }
+
+  .logo {
+    margin: 0;                   /* remove extra margin */
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+    width:255px;
+    height:255px;
+    margin-top:60px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin: 0 auto 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .hero-text p {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .hero-image {
+    width: 170px;
+    height: 170px;
+    margin-left: 1300px;
+    margin-top:-200px;
+  }
+.hero-icon{
+
+  margin-top:-200px;
+}
+  section {
+    padding: 60px 20px;
+  }
+
+  section h2 {
+    font-size: 70px;
+    line-height: 90px;
+  }
+
+  .images {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 0;
+    width:970px;
+   
+   
+    margin-left: -5;
+  }
+  
+
+  .work-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work-item img {
+    width: 90%;
+    height: auto;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact img {
+    width: 300px;
+    height: auto;
+  }
+  #work{
+    margin-top:   30px;
+    
+  }
+}
+
+/* =============== Mobile Phones =============== */
+@media (max-width: 600px) {
+  header {
+    padding: 15px 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;                   /* space between items */
+   margin-left:550px;
+   
+  }
+  
+  .header1{
+   margin-left:190px;
+
+  }
+
+
+  nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;  /* nav links centered */
+    gap: 15px;
+    margin-left:130px;
+  }
+
+  .logo {
+        /* keep logo on left */
+    margin-left:10px;
+
+    flex-shrink: 0; 
+    white-space: nowrap;   
+  }
+.socials-1{
+  margin-left:300px;
+}
+  .hero {
+    flex-direction: column;
+    padding: 40px 15px;
+
+  margin-top:90px;
+    
+    
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .hero-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+
+  section h2 {
+    font-size: 50px;
+    line-height: 65px;
+    text-align: center;
+  }
+
+  .timeline {
+    margin-left: 0;
+  }
+
+  .timeline-item h3,
+  .timeline-item p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .images-1  {
+      
+   /* margin: 20 auto;  */            /* center container */
+    justify-content: center;     /* center images */
+    flex-wrap: wrap;             /* allow wrapping on small screens */
+    gap: 15px;                   /* smaller gap between images */
+    display: flex;  
+                 /* ensure flexbox is active */
+  margin-left:60px;
+    width:max-content;
+  }
+
+  .images img {
+    width: 100px;
+    height: 100px;
+
+  }
+
+  .work-items {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .work-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact img {
+    width: 220px;
+    height: auto;
+  }
+
+  
+
+
+
+
+#about {
+    padding: 20px;
+    margin: 0;               /* remove extra margins */
+  }
+
+  #about h2 {
+    font-size: 50px;         /* smaller heading on phone */
+    line-height: 60px;
+    text-align: center;      /* center heading */
+  }
+
+  #about p {
+    width: 100%;             /* text takes full width */
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;      /* center text */
+    margin: 0 auto 20px;   /* remove side gaps */
+    margin-right:-20px;
+    width:max-content;
+
+  }
+
+  .timeline {
+    margin: 0;               /* remove left margin */
+    padding: 0;
+    width: 100%;             /* take full screen width */
+  }
+
+  .timeline-item {
+    width: 100%;             /* expand full width */
+    font-size: 18px;
+    line-height: 28px;
+    padding: 10px 0;
+    text-align: center;      /* center timeline text */
+  }
+
+  .timeline-item h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .timeline-item p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+
+  
+  .work{
+    margin-left:20px;
+    width:max-content;
+  }
+  .work-p{
+   width:max-content;
+  }
+  #work{
+    margin-top:30px;
+  }
+  .work-item-1{
+    margin-left:150px;
+    text-align: left;
+  }
+  .work-item-2{
+    margin-left:150px;
+    text-align: left;
+  }
+
+.contact{
+  margin-left:400px ;
+}
+.contact p{
+  width:max-content;
+}
+}
+
+        
+  </style>
+</head>
+<body >
+  <!-- Header -->
+  <header>
+    <div class="logo" style="margin-left:30px;color: #03045E;font-size: 20px;
+line-height: 36px;">Shatha Ghazal</div>
+    <nav>
+      <div class="header1">
+      <div class="header-1"style="display:flex;gap:55px;margin-left:-30px;font-size: 18px;
+line-height: 27px;">
+      <div><a style="color: #03045E;font-size: 16px;line-height: 25px;" href="#home">Home</a></div>
+      <div><a style="color: #03045E;font-size: 16px;line-height: 25px;"href="#about">About</a></div>
+      <div><a style="color: #03045E;font-size: 16px;line-height: 25px;"href="#work">Work</a></div>
+      </div>
+      </div>
+    </nav>
+    <div class="socials-1">
+    <div class="socials">
+      <a href="#">🎧</a>
+      <a href="#">Bē</a>
+      <a href="#">🐦</a>
+    </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div style="width:620px ; height:220px;margin-top:-145px;margin-left:30px" class="hero-text">
+      <p style="font-size:25px; font-size: 28px;
+line-height: 42px;color: #03045E;">Hello, I’m Shatha,</p>
+      <h1 style="font-size:90px;line-height:95px;font-weight:800;color: #03045E"><b>Web <br> Developer</b></h1>
+      <p style="font-size:25px;font-size: 28px;
+line-height: 42px;color: #03045E;">based in UAE</p>
+      <br>
+
+       <div class="line-box" style=" height:57px;width:150px;position:absolute;left:6.63%;top:77.30%; border-radius: 15px; "></div>
+      <button  class="resume-btn"onclick="redirectToPage()"style="background-color: rgba(228, 213, 50, 0.607); height:57px;width:150px;position:absolute;left:7.00%;top:78.00%; border-radius: 15px; ">Resume</button>
+
+    <script>
+        function redirectToPage() {
+            window.location.href = 'c.html'; // Replace with your target page
+        }
+    </script>
+     
+    </div>
+   
+      <div class="hero-image-wrapper" style="position: relative;">
+      
+      <img  class="hero-image" src="hijab-girl.jpg" alt="Profile Picture" style="height:420px;width:420px;margin-right:30px; border-radius: 50%;
+      
+      border: 5px solid #f4f1d0;">
+    
+    <img class="hero-icon" src="imge1.png" style="width:40px;height:40px;border:none;">
+  </div>
+  
+  </section>
+  <section >
+    <h2 style="
+    font-style: normal;
+    font-weight: 800;
+    font-size: 100px;
+    line-height: 116px;" >Skills</h2>
+  
+
+  </section>
+  <div class="images-1">
+  <div class="images"style="display: flex; gap: 30px; align-items: center;margin-left: 160px; 
+   
+    flex-wrap: wrap;
+    justify-content: center;
+   
+    margin: 40px 0; /* optional spacing */
+  ">
+    <img src="e_.jpg" style="width:130px; height:130px">
+    <img src="e-.jpg" style="width:130px; height:130px">
+    <img src="e-s.jpg" style="width:130px; height:130px">
+    <img src="php-1.png" style="width:130px; height:130px">
+    <img src="sql-.jpg" style="width:130px; height:130px">
+    <img src="j-.jpg" style="width:130px; height:130px">
+    </div>
+    </div>
+  <section id="about" style="margin-top:-30px;margin-left:30px; margin-bottom: -170px; /* Decrease this value to reduce space */
+  padding-bottom: 30px;">
+    <h2 style="
+    font-style: normal;
+    font-weight: 800;
+    font-size: 100px;
+    line-height: 116px;" >about</h2>
+   
+    <p class="about-text" style="font-size: 24px;
+line-height: 44px;color: #03045E">I’m a passionate web developer specializing in building modern, responsive, and user-friendly websites.
+
+<br>My skills include HTML, CSS, JavaScript, and frameworks that bring designs to life.
+
+<br>I enjoy turning ideas into functional digital solutions that enhance user experience.
+
+<br>Through my projects, I showcase creativity and a strong focus on performance</p>
+    <br>
+    <br>
+    <br>
+    <div class="timeline"style="margin-left:200px">
+      
+      <div class="timeline-item" style="font-size: 24px;
+line-height: 44px;color: #03045E" >
+         
+        <h3 style="font-size: 24px;
+line-height: 44px;color: #03045E">● 2017–2020</h3>
+        <p style="font-size: 24px;
+line-height: 44px;color: #03045E">Learned the basics of HTML, CSS, and JavaScript through  tutorials..</p>
+      </div>
+      <br>
+
+      <div class="timeline-item">
+        <h3 style="font-size: 24px;
+line-height: 44px;color: #03045E">● 2020–2023</h3>
+        <p style="font-size: 24px;
+line-height: 44px;color: #03045E">building portfolios and small websites for friends and family</p>
+      </div>
+      <br>
+      <div class="timeline-item">
+        <h3 style="font-size: 24px;
+line-height: 44px;color: #03045E">● 2023 – Present</h3>
+        <p style="font-size: 24px;
+line-height: 44px;color: #03045E">  Developing full-stack projects with php and mysql</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Work -->
+  <section id="work" style="margin-left:30px">
+    <h2 style="font-style: normal;
+    font-weight: 800;
+    font-size: 95px;
+    line-height: 116px;">work</h2>
+     <div class="work">
+      <p class="work-p"style="font-size: 24px;
+  line-height: 44px;color: #03045E">accomplished building many web pages , web applications and small websites.</p>
+      <div class="work-items">
+        <div>
+        <div class="work-item-1" style="margin-left:65px">
+          <img class="image1"src="image1.jpg" alt="Project 1" style="height:300px;width:460px;">
+         
+          <h3 style="font-size: 24px;
+      line-height: 44px;color: #03045E"><a href="https://to-do-list-pi-ten-21.vercel.app/"><u>Todo-application</u></a></h3>
+          <p style="font-size: 24px;
+      line-height: 44px;color: #03045E">A simple and elegant to-do list web app to manage your tasks..</p>
+        </div>
+        <div class="work-item-2"style="margin-left:65px">
+          <img class="image2"src="imge_2.jpg" alt="Project 2" style="height:300px;width:460px">
+         
+          <h3 style="font-size: 24px;
+      line-height: 44px;color: #03045E"><a href="https://expense-tracker-snowy-chi-97.vercel.app/"><u>expense-tracker</u></a></h3>
+          <p style="font-size: 24px;
+      line-height: 44px;color: #03045E"> Browse and manage a list of users in this responsive directory app..</p>
+        </div>
+      </div>
+      <br>
+      <br>
+      
+        <div class="work-item-3" style="margin-left:-20px">
+          <img class="image3"src="imge_2.jpg" alt="Project 2" style="height:300px;width:460px">
+         
+          <h3 style="font-size: 24px;
+      line-height: 44px;color: #03045E"><a href="https://user-directory-coral.vercel.app/"><u>User-directory page</u></a></h3>
+          <p style="font-size: 24px;
+      line-height: 44px;color: #03045E"> Browse and manage a list of users in this responsive directory app..</p>
+        </div>
+      </div>
+    <div>
+  </section>
+
+
+  <!-- Contact -->
+  <section id="contact" style="margin-top:-73px">
+    <h2 style="margin-left:30px;font-style: normal;
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 116px;">contact</h2>
+    <div class="contact">
+      <img src="c.jpg" alt="Contact Image" style="width:425px;height:311px;">
+      <div class="contact-info" style="font-size: 24px;
+line-height: 44px;color: #03045E">
+        <p style="font-size: 24px;
+line-height: 44px;color: #03045E">contact me on these links.</p>
+        <a href="mailto:shathaghazal3@gmail.com">shathaghazal3@gmail.com</a>
+        <a href="https://github.com/shatha-ghazal">github.com/shatha-ghazal</a>
+        <a href="www.linkedin.com">linkedin.com</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html> 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
